@@ -1,8 +1,6 @@
 package jane.entity;
 
-import jane.entity.enums.CarBrandEnum;
 import jane.entity.enums.CarColorEnum;
-import jane.entity.enums.CarModelEnum;
 import jane.entity.enums.CarStatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,8 +20,8 @@ import javax.persistence.Table;
 public class Car {
     @Id
     private Integer id;
-    private CarBrandEnum brand;
-    private CarModelEnum model;
+    private String brand;
+    private String model;
     private CarColorEnum color;
     private Integer seatAmount;
     private Integer price;

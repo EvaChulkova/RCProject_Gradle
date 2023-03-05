@@ -20,8 +20,8 @@ import java.time.LocalDateTime;
 public class Booking {
     @Id
     private Integer id;
-    private Integer userId;
-    private Integer carId;
+    //private Client client;
+    //private Car car;
     private LocalDateTime rentalStart;
     private LocalDateTime rentalFinish;
     private BookingStatusEnum status;

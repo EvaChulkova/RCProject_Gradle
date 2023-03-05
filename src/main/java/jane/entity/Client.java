@@ -20,7 +20,7 @@ public class Client {
     @Id
     private Integer id;
     private Integer userId;
-    private Integer age;
+    private LocalDate birthDate;
     private Integer licenceNo;
     private LocalDate validity;
 }

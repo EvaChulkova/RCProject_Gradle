@@ -1,6 +1,6 @@
 package jane;
 
-public class Main {
+public class AppRunner {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
