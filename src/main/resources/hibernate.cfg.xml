@@ -12,6 +12,7 @@
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
 
+
     <mapping class="jane.entity.User"/>
     <mapping class="jane.entity.Car"/>
     <mapping class="jane.entity.Client"/>
