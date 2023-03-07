@@ -15,12 +15,12 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table
+@Table(name = "clients", schema = "public")
 public class Client {
     @Id
     private Integer id;
     private Integer userId;
     private LocalDate birthDate;
-    private Integer licenceNo;
+    private Integer drivingLicenceNo;
     private LocalDate validity;
 }
