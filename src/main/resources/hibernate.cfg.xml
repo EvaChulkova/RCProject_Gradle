@@ -14,6 +14,8 @@
 
     <mapping class="jane.entity.User"/>
     <mapping class="jane.entity.Car"/>
+    <mapping class="jane.entity.Client"/>
+    <mapping class="jane.entity.Booking"/>
 
 
     <!-- DB schema will be updated if needed -->
