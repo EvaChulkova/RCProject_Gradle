@@ -14,6 +14,8 @@ public class UserDao {
     public List<User> findAll(Session session) {
         /*return session.createQuery("select u from User u", User.class)
                 .list();*/
+
+
         CriteriaBuilder cb = session.getCriteriaBuilder();
 
         CriteriaQuery<User> criteria = cb.createQuery(User.class);
