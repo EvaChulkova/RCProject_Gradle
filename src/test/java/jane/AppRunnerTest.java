@@ -9,6 +9,8 @@ import jane.entity.enums.CarColorEnum;
 import jane.entity.enums.CarStatusEnum;
 import jane.entity.enums.RoleEnum;
 import jane.util.HibernateTestUtil;
+import jane.util.HibernateUtil;
+import lombok.Cleanup;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Test;
@@ -19,6 +21,43 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 class AppRunnerTest {
+
+    @Test
+    void addCarAndClientToNewBooking() {
+        @Cleanup SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        Client client = session.get(Client.class, 1L);
+        Car car = session.get(Car.class, 1L);
+
+        Booking booking = Booking.builder()
+                .rentalStart(LocalDate.of(2023, 3, 12))
+                .rentalFinish(LocalDate.of(2023, 3, 15))
+                .status(BookingStatusEnum.IN_PROGRESS)
+                .comment("Test mapping booking")
+                .build();
+
+        booking.addClient(client);
+        booking.addCar(car);
+
+        session.save(booking);
+
+        session.getTransaction().commit();
+    }
+
+    @Test
+    void oneToMany() {
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            Car car = session.get(Car.class, 1L);
+            System.out.println("");
+
+            session.getTransaction().commit();
+        }
+    }
 
     @Test
     void createBooking() {

@@ -5,9 +5,10 @@ import jane.entity.enums.CarStatusEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -15,12 +16,16 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = "bookings")
+@EqualsAndHashCode(exclude = "bookings")
 @Builder
 @Entity
 @Table(name = "cars", schema = "public")
@@ -30,6 +35,7 @@ public class Car {
     private Long id;
     private String brand;
     private String model;
+
     @Enumerated(EnumType.STRING)
     private CarColorEnum color;
 
@@ -42,7 +48,14 @@ public class Car {
     @Enumerated(EnumType.STRING)
     private CarStatusEnum status;
 
-    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
-    private Booking booking;
+    @Column(name = "image")
+    private String image;
 
+    @Builder.Default
+    @OneToMany(mappedBy = "car")
+    private List<Booking> bookings = new ArrayList<>();
+
+
+    /*@OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
+    private Booking booking;*/
 }

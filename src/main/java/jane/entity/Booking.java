@@ -8,11 +8,14 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
@@ -25,13 +28,13 @@ import java.time.LocalDate;
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client_id")
     private Client client;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "car_id")
     private Car car;
 
@@ -41,7 +44,18 @@ public class Booking {
     @Column(name = "rental_finish")
     private LocalDate rentalFinish;
 
+    @Enumerated(EnumType.STRING)
     private BookingStatusEnum status;
 
     private String comment;
+
+    public void addClient(Client client){
+        this.client = client;
+        this.client.getBookings().add(this);
+    }
+
+    public void addCar(Car car) {
+        this.car = car;
+        this.car.getBookings().add(this);
+    }
 }
