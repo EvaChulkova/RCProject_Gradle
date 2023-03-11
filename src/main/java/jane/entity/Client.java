@@ -44,7 +44,4 @@ public class Client {
     @OneToMany(mappedBy = "client")
     private List<Booking> bookings = new ArrayList<>();
 
-
-    /*@OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
-    private Booking booking;*/
 }

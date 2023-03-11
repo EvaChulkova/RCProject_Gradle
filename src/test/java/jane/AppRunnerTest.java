@@ -7,9 +7,9 @@ import jane.entity.User;
 import jane.entity.enums.BookingStatusEnum;
 import jane.entity.enums.CarColorEnum;
 import jane.entity.enums.CarStatusEnum;
+import jane.entity.enums.PaymentStateEnum;
 import jane.entity.enums.RoleEnum;
 import jane.util.HibernateTestUtil;
-import jane.util.HibernateUtil;
 import lombok.Cleanup;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -23,71 +23,32 @@ import static org.assertj.core.api.Assertions.assertThat;
 class AppRunnerTest {
 
     @Test
-    void addCarAndClientToNewBooking() {
-        @Cleanup SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+    void createBooking() {
+        @Cleanup SessionFactory sessionFactory = HibernateTestUtil.buildSessionFactory();
         @Cleanup Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        Client client = session.get(Client.class, 1L);
-        Car car = session.get(Car.class, 1L);
+        User user = buildUser();
+        session.save(user);
 
-        Booking booking = Booking.builder()
-                .rentalStart(LocalDate.of(2023, 3, 12))
-                .rentalFinish(LocalDate.of(2023, 3, 15))
-                .status(BookingStatusEnum.IN_PROGRESS)
-                .comment("Test mapping booking")
-                .build();
+        Client client = buildClient();
+        client.setUser(user);
+        session.save(client);
 
-        booking.addClient(client);
-        booking.addCar(car);
+        Car car = buildCar();
+        session.save(car);
 
-        session.save(booking);
+        Booking expectedBooking = buildBooking();
+        expectedBooking.addClient(client);
+        expectedBooking.addCar(car);
+
+        var booking = session.save(expectedBooking);
+        session.evict(expectedBooking);
+
+        Booking actualBooking = session.get(Booking.class, booking);
+        assertThat(actualBooking.getId()).isEqualTo(expectedBooking.getId());
 
         session.getTransaction().commit();
-    }
-
-    @Test
-    void oneToMany() {
-        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
-             Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-
-            Car car = session.get(Car.class, 1L);
-            System.out.println("");
-
-            session.getTransaction().commit();
-        }
-    }
-
-    @Test
-    void createBooking() {
-        try (SessionFactory sessionFactory = HibernateTestUtil.buildSessionFactory();
-             Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-
-            User user = buildUser();
-            session.save(user);
-
-            Client client = buildClient();
-            client.setUser(user);
-            session.save(client);
-
-            Car car = buildCar();
-            session.save(car);
-
-            Booking expectedBooking = buildBooking();
-            expectedBooking.setClient(client);
-            expectedBooking.setCar(car);
-
-            var booking = session.save(expectedBooking);
-            session.evict(expectedBooking);
-
-            Booking actualBooking = session.get(Booking.class, booking);
-            assertThat(actualBooking.getId()).isEqualTo(expectedBooking.getId());
-
-
-            session.getTransaction().commit();
-        }
     }
 
     @Test
@@ -148,8 +109,6 @@ class AppRunnerTest {
 
 
 
-
-
     private Booking buildBooking() {
         return Booking.builder()
                 .client(buildClient())
@@ -157,6 +116,7 @@ class AppRunnerTest {
                 .rentalStart(LocalDate.of(2023, 3, 10))
                 .rentalFinish(LocalDate.of(2023, 3, 14))
                 .status(BookingStatusEnum.APPROVED)
+                .paymentState(PaymentStateEnum.NOT_PAID)
                 .build();
     }
 
@@ -168,6 +128,7 @@ class AppRunnerTest {
                 .seatAmount(4)
                 .pricePerDay(2100)
                 .status(CarStatusEnum.AVAILABLE)
+                .image("ImageKiaRio")
                 .build();
     }
 

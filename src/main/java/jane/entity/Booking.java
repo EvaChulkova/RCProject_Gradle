@@ -1,6 +1,7 @@
 package jane.entity;
 
 import jane.entity.enums.BookingStatusEnum;
+import jane.entity.enums.PaymentStateEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -46,6 +47,10 @@ public class Booking {
 
     @Enumerated(EnumType.STRING)
     private BookingStatusEnum status;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "payment_state")
+    private PaymentStateEnum paymentState;
 
     private String comment;
 
