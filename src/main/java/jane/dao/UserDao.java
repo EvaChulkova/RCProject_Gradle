@@ -1,19 +1,17 @@
 package jane.dao;
 
 import jane.entity.User;
-import org.hibernate.Session;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 import java.util.List;
+import java.util.Optional;
 
-public class UserDao {
+public class UserDao implements Dao<Long, User> {
     private static final UserDao INSTANCE = new UserDao();
 
-    public List<User> findAll(Session session) {
-        /*return session.createQuery("select u from User u", User.class)
-                .list();*/
+
+    /*public List<User> findAll(Session session) {
+        *//*return session.createQuery("select u from User u", User.class)
+                .list();*//*
 
 
         CriteriaBuilder cb = session.getCriteriaBuilder();
@@ -24,6 +22,34 @@ public class UserDao {
         criteria.select(user);
 
         return session.createQuery(criteria).list();
+    }*/
+
+
+
+
+    @Override
+    public List<User> findAll() {
+        return null;
+    }
+
+    @Override
+    public Optional<User> findById(Long id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public boolean delete(Long id) {
+        return false;
+    }
+
+    @Override
+    public User update(User entity) {
+        return null;
+    }
+
+    @Override
+    public User save(User entity) {
+        return null;
     }
 
 
