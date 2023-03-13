@@ -47,6 +47,19 @@ public class UserDaoQueryIT {
     }
 
     @Test
+    void findAllByLogin() {
+        @Cleanup Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        List<User> results = userDao.findAllByLogin(session, "inna@gmail.com");
+
+        assertThat(results).hasSize(1);
+        assertThat(results.get(0).getLogin()).isEqualTo("inna@gmail.com");
+
+        session.getTransaction().commit();
+    }
+
+    @Test
     void findUserByFirstNameAndLastName() {
         @Cleanup Session session = sessionFactory.openSession();
         session.beginTransaction();

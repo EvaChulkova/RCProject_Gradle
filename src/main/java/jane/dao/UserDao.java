@@ -48,6 +48,14 @@ public class UserDao implements Dao<Long, User> {
                 .fetch();
     }
 
+    public List<User> findAllByLogin(Session session, String login) {
+        return new JPAQuery<User>(session)
+                .select(user)
+                .from(user)
+                .where(user.login.eq(login))
+                .fetch();
+    }
+
     public List<User> findUserByFirstNameAndLastName(Session session, UserFilter userFilter) {
         Predicate predicate = QPredicate.builder()
                 .add(userFilter.getFirstName(), user.firstName::eq)

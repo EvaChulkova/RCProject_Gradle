@@ -1,8 +1,11 @@
 package jane.dao;
 
+import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
 import jane.entity.Booking;
 import jane.entity.enums.PaymentStateEnum;
+import jane.query.QPredicate;
+import jane.query.filter.BookingFilter;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -46,6 +49,20 @@ public class BookingDao implements Dao<Long, Booking> {
                 .where(booking.paymentState.eq(paymentState))
                 .fetch();
     }
+
+    public List<Booking> findBookingsByStatusAndPaymentState(Session session, BookingFilter bookingFilter) {
+        Predicate predicate = QPredicate.builder()
+                .add(bookingFilter.getStatus(), booking.status::eq)
+                .add(bookingFilter.getPaymentState(), booking.paymentState::eq)
+                .buildAnd();
+
+        return new JPAQuery<Booking>(session)
+                .select(booking)
+                .from(booking)
+                .where(predicate)
+                .fetch();
+    }
+
 
     public static BookingDao getInstance() {
         return INSTANCE;
