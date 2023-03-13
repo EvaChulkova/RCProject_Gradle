@@ -5856,3 +5856,393 @@ https://vladmihalcea.com/hypersistence-optimizer/
 [2023-03-13 15:37:26,852] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4b5798c2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 [2023-03-13 15:37:26,885] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 [2023-03-13 15:37:27,798] INFO [org.hibernate.orm.connections.pooling: 502] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:32942/test?loggerLevel=OFF]
+[2023-03-13 15:45:39,633] INFO [org.testcontainers.utility.ImageNameSubstitutor: 55] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2023-03-13 15:45:39,702] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 362] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2023-03-13 15:45:40,524] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 272] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2023-03-13 15:45:40,528] INFO [org.testcontainers.DockerClientFactory: 198] Docker host IP address is localhost
+[2023-03-13 15:45:40,559] INFO [org.testcontainers.DockerClientFactory: 205] Connected to docker: 
+  Server Version: 23.0.1
+  API Version: 1.42
+  Operating System: Ubuntu 20.04.5 LTS
+  Total Memory: 9849 MB
+[2023-03-13 15:45:40,611] INFO [🐳 [testcontainers/ryuk:0.3.4]: 376] Creating container for image: testcontainers/ryuk:0.3.4
+[2023-03-13 15:45:40,890] INFO [🐳 [testcontainers/ryuk:0.3.4]: 440] Container testcontainers/ryuk:0.3.4 is starting: 9bf0a5cdaf60c1cf7ad239d0f84f9fdc406e89311eaf95955c5a763ef7e1e913
+[2023-03-13 15:45:41,682] INFO [🐳 [testcontainers/ryuk:0.3.4]: 520] Container testcontainers/ryuk:0.3.4 started in PT1.103258418S
+[2023-03-13 15:45:41,723] INFO [org.testcontainers.utility.RyukResourceReaper: 43] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2023-03-13 15:45:41,724] INFO [org.testcontainers.DockerClientFactory: 235] Checking the system...
+[2023-03-13 15:45:41,725] INFO [org.testcontainers.DockerClientFactory: 256] ✔︎ Docker server version should be at least 1.6.0
+[2023-03-13 15:45:41,726] INFO [🐳 [postgres:13]: 376] Creating container for image: postgres:13
+[2023-03-13 15:45:41,824] INFO [🐳 [postgres:13]: 440] Container postgres:13 is starting: 338f6ed6c72ba643305710f092d41d494363fa0a89d5618b560fe3f5bd5f001c
+[2023-03-13 15:45:43,705] INFO [🐳 [postgres:13]: 520] Container postgres:13 started in PT1.978993061S
+[2023-03-13 15:45:43,765] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 5.5.6.Final
+[2023-03-13 15:45:43,939] INFO [Hibernate Types: 283] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+[2023-03-13 15:45:44,735] INFO [org.hibernate.annotations.common.Version: 56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-03-13 15:45:44,983] WARN [org.hibernate.orm.connections.pooling: 72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-03-13 15:45:44,996] INFO [org.hibernate.orm.connections.pooling: 115] HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:32944/test?loggerLevel=OFF]
+[2023-03-13 15:45:45,001] INFO [org.hibernate.orm.connections.pooling: 124] HHH10001001: Connection properties: {password=****, user=test}
+[2023-03-13 15:45:45,004] INFO [org.hibernate.orm.connections.pooling: 129] HHH10001003: Autocommit mode: false
+[2023-03-13 15:45:45,010] INFO [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: 274] HHH000115: Hibernate connection pool size: 20 (min=1)
+[2023-03-13 15:45:45,227] INFO [org.hibernate.dialect.Dialect: 175] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[2023-03-13 15:45:46,646] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7d6c4079] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 15:45:46,665] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 15:45:46,668] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 15:45:46,674] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 15:45:46,676] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 15:45:46,710] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 15:45:46,712] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "clients" does not exist, skipping
+[2023-03-13 15:45:46,724] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 15:45:46,726] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "bookings" does not exist, skipping
+[2023-03-13 15:45:46,731] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 15:45:46,733] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "cars" does not exist, skipping
+[2023-03-13 15:45:46,741] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 15:45:46,743] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "clients" does not exist, skipping
+[2023-03-13 15:45:46,752] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 15:45:46,756] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "users" does not exist, skipping
+[2023-03-13 15:45:46,773] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4b5798c2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 15:45:46,811] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-13 15:45:47,526] INFO [org.hibernate.orm.connections.pooling: 502] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:32944/test?loggerLevel=OFF]
+[2023-03-13 16:11:25,263] INFO [org.testcontainers.utility.ImageNameSubstitutor: 55] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2023-03-13 16:11:25,328] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 362] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2023-03-13 16:11:26,368] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 272] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2023-03-13 16:11:26,374] INFO [org.testcontainers.DockerClientFactory: 198] Docker host IP address is localhost
+[2023-03-13 16:11:26,448] INFO [org.testcontainers.DockerClientFactory: 205] Connected to docker: 
+  Server Version: 23.0.1
+  API Version: 1.42
+  Operating System: Ubuntu 20.04.5 LTS
+  Total Memory: 9849 MB
+[2023-03-13 16:11:26,580] INFO [🐳 [testcontainers/ryuk:0.3.4]: 376] Creating container for image: testcontainers/ryuk:0.3.4
+[2023-03-13 16:11:26,983] INFO [🐳 [testcontainers/ryuk:0.3.4]: 440] Container testcontainers/ryuk:0.3.4 is starting: cf1bbf576c60a0f4eab1814959cea2d5187f914d85c7c774b33bc617072dd5ec
+[2023-03-13 16:11:28,255] INFO [🐳 [testcontainers/ryuk:0.3.4]: 520] Container testcontainers/ryuk:0.3.4 started in PT1.75275144S
+[2023-03-13 16:11:28,281] INFO [org.testcontainers.utility.RyukResourceReaper: 43] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2023-03-13 16:11:28,283] INFO [org.testcontainers.DockerClientFactory: 235] Checking the system...
+[2023-03-13 16:11:28,287] INFO [org.testcontainers.DockerClientFactory: 256] ✔︎ Docker server version should be at least 1.6.0
+[2023-03-13 16:11:28,291] INFO [🐳 [postgres:13]: 376] Creating container for image: postgres:13
+[2023-03-13 16:11:28,429] INFO [🐳 [postgres:13]: 440] Container postgres:13 is starting: 3a485daea3b32976ec215b6b89c386b72e0552d912f7d4f82be8c81a53033c52
+[2023-03-13 16:11:31,920] INFO [🐳 [postgres:13]: 520] Container postgres:13 started in PT3.629104451S
+[2023-03-13 16:11:32,059] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 5.5.6.Final
+[2023-03-13 16:11:32,698] INFO [Hibernate Types: 283] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+[2023-03-13 16:11:33,860] INFO [org.hibernate.annotations.common.Version: 56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-03-13 16:11:34,096] WARN [org.hibernate.orm.connections.pooling: 72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-03-13 16:11:34,108] INFO [org.hibernate.orm.connections.pooling: 115] HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:32946/test?loggerLevel=OFF]
+[2023-03-13 16:11:34,115] INFO [org.hibernate.orm.connections.pooling: 124] HHH10001001: Connection properties: {password=****, user=test}
+[2023-03-13 16:11:34,124] INFO [org.hibernate.orm.connections.pooling: 129] HHH10001003: Autocommit mode: false
+[2023-03-13 16:11:34,143] INFO [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: 274] HHH000115: Hibernate connection pool size: 20 (min=1)
+[2023-03-13 16:11:34,368] INFO [org.hibernate.dialect.Dialect: 175] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[2023-03-13 16:11:36,062] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@a84338a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:11:36,069] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:11:36,072] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:11:36,082] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:11:36,086] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:11:36,098] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:11:36,101] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "clients" does not exist, skipping
+[2023-03-13 16:11:36,111] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:11:36,112] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "bookings" does not exist, skipping
+[2023-03-13 16:11:36,127] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:11:36,129] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "cars" does not exist, skipping
+[2023-03-13 16:11:36,137] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:11:36,141] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "clients" does not exist, skipping
+[2023-03-13 16:11:36,149] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:11:36,156] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "users" does not exist, skipping
+[2023-03-13 16:11:36,187] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6248cfab] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:11:36,285] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-13 16:11:37,509] INFO [org.hibernate.orm.connections.pooling: 502] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:32946/test?loggerLevel=OFF]
+[2023-03-13 16:50:35,953] INFO [org.testcontainers.utility.ImageNameSubstitutor: 55] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2023-03-13 16:50:35,982] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 362] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2023-03-13 16:50:36,475] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 272] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2023-03-13 16:50:36,480] INFO [org.testcontainers.DockerClientFactory: 198] Docker host IP address is localhost
+[2023-03-13 16:50:36,516] INFO [org.testcontainers.DockerClientFactory: 205] Connected to docker: 
+  Server Version: 23.0.1
+  API Version: 1.42
+  Operating System: Ubuntu 20.04.5 LTS
+  Total Memory: 9849 MB
+[2023-03-13 16:50:36,562] INFO [🐳 [testcontainers/ryuk:0.3.4]: 376] Creating container for image: testcontainers/ryuk:0.3.4
+[2023-03-13 16:50:36,746] INFO [🐳 [testcontainers/ryuk:0.3.4]: 440] Container testcontainers/ryuk:0.3.4 is starting: 0264b13b519e1ac8260fc988c8d3ff66fb63febc1144b95b0609689121b58704
+[2023-03-13 16:50:37,214] INFO [🐳 [testcontainers/ryuk:0.3.4]: 520] Container testcontainers/ryuk:0.3.4 started in PT0.684553404S
+[2023-03-13 16:50:37,221] INFO [org.testcontainers.utility.RyukResourceReaper: 43] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2023-03-13 16:50:37,222] INFO [org.testcontainers.DockerClientFactory: 235] Checking the system...
+[2023-03-13 16:50:37,223] INFO [org.testcontainers.DockerClientFactory: 256] ✔︎ Docker server version should be at least 1.6.0
+[2023-03-13 16:50:37,225] INFO [🐳 [postgres:13]: 376] Creating container for image: postgres:13
+[2023-03-13 16:50:37,283] INFO [🐳 [postgres:13]: 440] Container postgres:13 is starting: 2d31820ca1ae6a8b390e2f1f8ce935d40c44a07935a30e51487e0c2ad5c0df38
+[2023-03-13 16:50:38,733] INFO [🐳 [postgres:13]: 520] Container postgres:13 started in PT1.509028491S
+[2023-03-13 16:50:38,780] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 5.5.6.Final
+[2023-03-13 16:50:38,963] INFO [Hibernate Types: 283] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+[2023-03-13 16:50:39,397] INFO [org.hibernate.annotations.common.Version: 56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-03-13 16:50:39,501] WARN [org.hibernate.orm.connections.pooling: 72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-03-13 16:50:39,505] INFO [org.hibernate.orm.connections.pooling: 115] HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:32948/test?loggerLevel=OFF]
+[2023-03-13 16:50:39,507] INFO [org.hibernate.orm.connections.pooling: 124] HHH10001001: Connection properties: {password=****, user=test}
+[2023-03-13 16:50:39,507] INFO [org.hibernate.orm.connections.pooling: 129] HHH10001003: Autocommit mode: false
+[2023-03-13 16:50:39,509] INFO [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: 274] HHH000115: Hibernate connection pool size: 20 (min=1)
+[2023-03-13 16:50:39,604] INFO [org.hibernate.dialect.Dialect: 175] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[2023-03-13 16:50:40,204] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@a84338a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:50:40,208] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:50:40,209] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:50:40,210] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:50:40,211] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:50:40,213] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:50:40,214] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "clients" does not exist, skipping
+[2023-03-13 16:50:40,216] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:50:40,217] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "bookings" does not exist, skipping
+[2023-03-13 16:50:40,218] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:50:40,219] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "cars" does not exist, skipping
+[2023-03-13 16:50:40,222] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:50:40,222] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "clients" does not exist, skipping
+[2023-03-13 16:50:40,224] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:50:40,225] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "users" does not exist, skipping
+[2023-03-13 16:50:40,243] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6248cfab] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:50:40,291] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-13 16:50:40,885] INFO [org.hibernate.orm.connections.pooling: 502] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:32948/test?loggerLevel=OFF]
+[2023-03-13 16:51:36,554] INFO [org.testcontainers.utility.ImageNameSubstitutor: 55] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2023-03-13 16:51:36,615] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 362] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2023-03-13 16:51:37,354] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 272] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2023-03-13 16:51:37,359] INFO [org.testcontainers.DockerClientFactory: 198] Docker host IP address is localhost
+[2023-03-13 16:51:37,382] INFO [org.testcontainers.DockerClientFactory: 205] Connected to docker: 
+  Server Version: 23.0.1
+  API Version: 1.42
+  Operating System: Ubuntu 20.04.5 LTS
+  Total Memory: 9849 MB
+[2023-03-13 16:51:37,430] INFO [🐳 [testcontainers/ryuk:0.3.4]: 376] Creating container for image: testcontainers/ryuk:0.3.4
+[2023-03-13 16:51:37,641] INFO [🐳 [testcontainers/ryuk:0.3.4]: 440] Container testcontainers/ryuk:0.3.4 is starting: f32d88d18647055980804a0bd0cef4b503cc335b6e1145f52ec14d17a654a801
+[2023-03-13 16:51:38,201] INFO [🐳 [testcontainers/ryuk:0.3.4]: 520] Container testcontainers/ryuk:0.3.4 started in PT0.806890159S
+[2023-03-13 16:51:38,209] INFO [org.testcontainers.utility.RyukResourceReaper: 43] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2023-03-13 16:51:38,211] INFO [org.testcontainers.DockerClientFactory: 235] Checking the system...
+[2023-03-13 16:51:38,212] INFO [org.testcontainers.DockerClientFactory: 256] ✔︎ Docker server version should be at least 1.6.0
+[2023-03-13 16:51:38,213] INFO [🐳 [postgres:13]: 376] Creating container for image: postgres:13
+[2023-03-13 16:51:38,278] INFO [🐳 [postgres:13]: 440] Container postgres:13 is starting: f756d827a5f7f9205ea49934d14611b36d53ebb8f4925c6da7d579b61c85d96d
+[2023-03-13 16:51:39,853] INFO [🐳 [postgres:13]: 520] Container postgres:13 started in PT1.640641487S
+[2023-03-13 16:51:39,897] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 5.5.6.Final
+[2023-03-13 16:51:40,042] INFO [Hibernate Types: 283] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+[2023-03-13 16:51:40,409] INFO [org.hibernate.annotations.common.Version: 56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-03-13 16:51:40,497] WARN [org.hibernate.orm.connections.pooling: 72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-03-13 16:51:40,502] INFO [org.hibernate.orm.connections.pooling: 115] HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:32950/test?loggerLevel=OFF]
+[2023-03-13 16:51:40,503] INFO [org.hibernate.orm.connections.pooling: 124] HHH10001001: Connection properties: {password=****, user=test}
+[2023-03-13 16:51:40,504] INFO [org.hibernate.orm.connections.pooling: 129] HHH10001003: Autocommit mode: false
+[2023-03-13 16:51:40,508] INFO [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: 274] HHH000115: Hibernate connection pool size: 20 (min=1)
+[2023-03-13 16:51:40,618] INFO [org.hibernate.dialect.Dialect: 175] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[2023-03-13 16:51:41,341] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@a84338a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:51:41,344] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:51:41,345] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:51:41,350] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:51:41,351] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:51:41,358] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:51:41,360] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "clients" does not exist, skipping
+[2023-03-13 16:51:41,363] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:51:41,365] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "bookings" does not exist, skipping
+[2023-03-13 16:51:41,368] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:51:41,369] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "cars" does not exist, skipping
+[2023-03-13 16:51:41,371] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:51:41,376] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "clients" does not exist, skipping
+[2023-03-13 16:51:41,379] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:51:41,380] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "users" does not exist, skipping
+[2023-03-13 16:51:41,384] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6248cfab] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:51:41,423] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-13 16:51:42,000] INFO [org.hibernate.orm.connections.pooling: 502] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:32950/test?loggerLevel=OFF]
+[2023-03-13 16:52:10,635] INFO [org.testcontainers.utility.ImageNameSubstitutor: 55] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2023-03-13 16:52:10,657] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 362] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2023-03-13 16:52:11,079] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 272] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2023-03-13 16:52:11,082] INFO [org.testcontainers.DockerClientFactory: 198] Docker host IP address is localhost
+[2023-03-13 16:52:11,100] INFO [org.testcontainers.DockerClientFactory: 205] Connected to docker: 
+  Server Version: 23.0.1
+  API Version: 1.42
+  Operating System: Ubuntu 20.04.5 LTS
+  Total Memory: 9849 MB
+[2023-03-13 16:52:11,146] INFO [🐳 [testcontainers/ryuk:0.3.4]: 376] Creating container for image: testcontainers/ryuk:0.3.4
+[2023-03-13 16:52:11,293] INFO [🐳 [testcontainers/ryuk:0.3.4]: 440] Container testcontainers/ryuk:0.3.4 is starting: c43e820b187e60e846de9f7dd18f1050726cb5c1a7bcd777b5e12e517e80dbf4
+[2023-03-13 16:52:11,828] INFO [🐳 [testcontainers/ryuk:0.3.4]: 520] Container testcontainers/ryuk:0.3.4 started in PT0.719728028S
+[2023-03-13 16:52:11,839] INFO [org.testcontainers.utility.RyukResourceReaper: 43] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2023-03-13 16:52:11,840] INFO [org.testcontainers.DockerClientFactory: 235] Checking the system...
+[2023-03-13 16:52:11,841] INFO [org.testcontainers.DockerClientFactory: 256] ✔︎ Docker server version should be at least 1.6.0
+[2023-03-13 16:52:11,849] INFO [🐳 [postgres:13]: 376] Creating container for image: postgres:13
+[2023-03-13 16:52:11,937] INFO [🐳 [postgres:13]: 440] Container postgres:13 is starting: ce4dde9c28a80c1b0aa51436999c85b729e12796e4d3f8ec7a81d2680867197a
+[2023-03-13 16:52:13,716] INFO [🐳 [postgres:13]: 520] Container postgres:13 started in PT1.867863042S
+[2023-03-13 16:52:13,773] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 5.5.6.Final
+[2023-03-13 16:52:14,046] INFO [Hibernate Types: 283] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+[2023-03-13 16:52:14,610] INFO [org.hibernate.annotations.common.Version: 56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-03-13 16:52:14,738] WARN [org.hibernate.orm.connections.pooling: 72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-03-13 16:52:14,747] INFO [org.hibernate.orm.connections.pooling: 115] HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:32952/test?loggerLevel=OFF]
+[2023-03-13 16:52:14,752] INFO [org.hibernate.orm.connections.pooling: 124] HHH10001001: Connection properties: {password=****, user=test}
+[2023-03-13 16:52:14,756] INFO [org.hibernate.orm.connections.pooling: 129] HHH10001003: Autocommit mode: false
+[2023-03-13 16:52:14,761] INFO [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: 274] HHH000115: Hibernate connection pool size: 20 (min=1)
+[2023-03-13 16:52:14,910] INFO [org.hibernate.dialect.Dialect: 175] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[2023-03-13 16:52:16,248] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@a84338a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:52:16,259] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:52:16,269] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:52:16,288] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:52:16,296] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:52:16,318] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:52:16,333] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "clients" does not exist, skipping
+[2023-03-13 16:52:16,349] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:52:16,356] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "bookings" does not exist, skipping
+[2023-03-13 16:52:16,370] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:52:16,377] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "cars" does not exist, skipping
+[2023-03-13 16:52:16,398] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:52:16,404] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "clients" does not exist, skipping
+[2023-03-13 16:52:16,413] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:52:16,416] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "users" does not exist, skipping
+[2023-03-13 16:52:16,468] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6248cfab] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:52:16,578] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-13 16:52:17,525] INFO [org.hibernate.orm.connections.pooling: 502] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:32952/test?loggerLevel=OFF]
+[2023-03-13 16:57:26,428] INFO [org.testcontainers.utility.ImageNameSubstitutor: 55] Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+[2023-03-13 16:57:26,458] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 362] Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+[2023-03-13 16:57:26,995] INFO [org.testcontainers.dockerclient.DockerClientProviderStrategy: 272] Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+[2023-03-13 16:57:27,010] INFO [org.testcontainers.DockerClientFactory: 198] Docker host IP address is localhost
+[2023-03-13 16:57:27,084] INFO [org.testcontainers.DockerClientFactory: 205] Connected to docker: 
+  Server Version: 23.0.1
+  API Version: 1.42
+  Operating System: Ubuntu 20.04.5 LTS
+  Total Memory: 9849 MB
+[2023-03-13 16:57:27,230] INFO [🐳 [testcontainers/ryuk:0.3.4]: 376] Creating container for image: testcontainers/ryuk:0.3.4
+[2023-03-13 16:57:27,613] INFO [🐳 [testcontainers/ryuk:0.3.4]: 440] Container testcontainers/ryuk:0.3.4 is starting: bbb2178e8d85f1a7acf7bf2746c50a06ed99626e895fa617f83fbd4bc7ddce0e
+[2023-03-13 16:57:28,229] INFO [🐳 [testcontainers/ryuk:0.3.4]: 520] Container testcontainers/ryuk:0.3.4 started in PT1.124292888S
+[2023-03-13 16:57:28,237] INFO [org.testcontainers.utility.RyukResourceReaper: 43] Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+[2023-03-13 16:57:28,238] INFO [org.testcontainers.DockerClientFactory: 235] Checking the system...
+[2023-03-13 16:57:28,247] INFO [org.testcontainers.DockerClientFactory: 256] ✔︎ Docker server version should be at least 1.6.0
+[2023-03-13 16:57:28,249] INFO [🐳 [postgres:13]: 376] Creating container for image: postgres:13
+[2023-03-13 16:57:28,299] INFO [🐳 [postgres:13]: 440] Container postgres:13 is starting: cecb83eb0f28d7f5af643399a6ccf800868ff0c88f4ccf142bd59fd9c8e12063
+[2023-03-13 16:57:29,791] INFO [🐳 [postgres:13]: 520] Container postgres:13 started in PT1.541969004S
+[2023-03-13 16:57:29,835] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 5.5.6.Final
+[2023-03-13 16:57:30,063] INFO [Hibernate Types: 283] This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+[2023-03-13 16:57:30,427] INFO [org.hibernate.annotations.common.Version: 56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-03-13 16:57:30,536] WARN [org.hibernate.orm.connections.pooling: 72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-03-13 16:57:30,542] INFO [org.hibernate.orm.connections.pooling: 115] HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:32954/test?loggerLevel=OFF]
+[2023-03-13 16:57:30,544] INFO [org.hibernate.orm.connections.pooling: 124] HHH10001001: Connection properties: {password=****, user=test}
+[2023-03-13 16:57:30,547] INFO [org.hibernate.orm.connections.pooling: 129] HHH10001003: Autocommit mode: false
+[2023-03-13 16:57:30,550] INFO [org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl: 274] HHH000115: Hibernate connection pool size: 20 (min=1)
+[2023-03-13 16:57:30,639] INFO [org.hibernate.dialect.Dialect: 175] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+[2023-03-13 16:57:31,302] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@a84338a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:57:31,309] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:57:31,311] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:57:31,316] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:57:31,319] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "bookings" does not exist, skipping
+[2023-03-13 16:57:31,324] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:57:31,326] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] relation "clients" does not exist, skipping
+[2023-03-13 16:57:31,330] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:57:31,332] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "bookings" does not exist, skipping
+[2023-03-13 16:57:31,336] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:57:31,338] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "cars" does not exist, skipping
+[2023-03-13 16:57:31,341] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:57:31,343] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "clients" does not exist, skipping
+[2023-03-13 16:57:31,348] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 230] SQL Warning Code: 0, SQLState: 00000
+[2023-03-13 16:57:31,350] WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper: 231] table "users" does not exist, skipping
+[2023-03-13 16:57:31,360] INFO [org.hibernate.orm.connections.access: 48] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6248cfab] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[2023-03-13 16:57:31,421] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2023-03-13 16:57:32,010] INFO [org.hibernate.orm.connections.pooling: 502] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:32954/test?loggerLevel=OFF]

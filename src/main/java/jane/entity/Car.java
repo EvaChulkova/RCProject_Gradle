@@ -21,6 +21,8 @@ import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
+import static jane.util.StringsUtil.SPACE;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -55,7 +57,7 @@ public class Car {
     @OneToMany(mappedBy = "car")
     private List<Booking> bookings = new ArrayList<>();
 
-
-    /*@OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
-    private Booking booking;*/
+    public String fullCarName() {
+        return getBrand() + SPACE + getModel();
+    }
 }

@@ -1,7 +1,10 @@
 package jane.dao;
 
+import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
 import jane.entity.Car;
+import jane.query.QPredicate;
+import jane.query.filter.CarFilter;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -45,6 +48,22 @@ public class CarDao implements Dao<Long, Car> {
                 .where(car.brand.eq(brand))
                 .fetch();
     }
+
+    public List<Car> findAllByBrandAndModel(Session session, CarFilter carFilter) {
+        Predicate predicate = QPredicate.builder()
+                .add(carFilter.getBrand(), car.brand::eq)
+                .add(carFilter.getModel(), car.model::eq)
+                .buildAnd();
+
+        return new JPAQuery<Car>(session)
+                .select(car)
+                .from(car)
+                .where(predicate)
+                .fetch();
+    }
+
+
+
 
     public static CarDao getInstance() {
         return INSTANCE;

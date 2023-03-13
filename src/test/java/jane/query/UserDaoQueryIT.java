@@ -2,6 +2,7 @@ package jane.query;
 
 import jane.dao.UserDao;
 import jane.entity.User;
+import jane.query.filter.UserFilter;
 import jane.util.HibernateTestUtil;
 import jane.util.TestDataImporter;
 import lombok.Cleanup;
@@ -41,6 +42,29 @@ public class UserDaoQueryIT {
 
         assertThat(results).hasSize(1);
         assertThat(results.get(0).getFirstName()).isEqualTo("Svetlana");
+
+        session.getTransaction().commit();
+    }
+
+    @Test
+    void findUserByFirstNameAndLastName() {
+        @Cleanup Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        UserFilter userFilter = UserFilter.builder()
+                .firstName("Ivan")
+                .lastname("Ivanov")
+                .build();
+
+        List<User> results = userDao.findUserByFirstNameAndLastName(session, userFilter);
+        assertThat(results).hasSize(1);
+
+        List<String> firstNames = results.stream().map(User::getFirstName).toList();
+        assertThat(firstNames).contains(userFilter.getFirstName());
+
+        List<String> lastNames = results.stream().map(User::getLastName).toList();
+        assertThat(lastNames).contains(userFilter.getLastname());
+
 
         session.getTransaction().commit();
     }

@@ -1,7 +1,10 @@
 package jane.dao;
 
+import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
 import jane.entity.User;
+import jane.query.QPredicate;
+import jane.query.filter.UserFilter;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -42,6 +45,19 @@ public class UserDao implements Dao<Long, User> {
                 .select(user)
                 .from(user)
                 .where(user.firstName.eq(firstName))
+                .fetch();
+    }
+
+    public List<User> findUserByFirstNameAndLastName(Session session, UserFilter userFilter) {
+        Predicate predicate = QPredicate.builder()
+                .add(userFilter.getFirstName(), user.firstName::eq)
+                .add(userFilter.getLastname(), user.lastName::eq)
+                .buildAnd();
+
+        return new JPAQuery<User>(session)
+                .select(user)
+                .from(user)
+                .where(predicate)
                 .fetch();
     }
 
