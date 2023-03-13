@@ -77,7 +77,7 @@ public class BookingDao implements Dao<Long, Booking> {
                 .from(booking)
                 .join(booking.client, client)
                 .join(booking.car, car)
-                .setHint(GraphSemantic.LOAD.getJpaHintName(), session.getEntityGraph("withClientAndCarEG"))
+                .setHint(GraphSemantic.LOAD.getJpaHintName(), session.getEntityGraph("withClientAndCar"))
                 .where(predicate)
                 .fetch();
     }

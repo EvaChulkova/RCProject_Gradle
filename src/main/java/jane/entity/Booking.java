@@ -7,8 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.hibernate.annotations.FetchMode;
-import org.hibernate.annotations.FetchProfile;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,19 +24,12 @@ import javax.persistence.Table;
 import java.time.LocalDate;
 
 @NamedEntityGraph(
-        name = "withClientAndCarEG",
+        name = "withClientAndCar",
         attributeNodes = {
                 @NamedAttributeNode("client"),
                 @NamedAttributeNode("car")
         }
 )
-
-@FetchProfile(name = "withClientAndCar", fetchOverrides = {
-        @FetchProfile.FetchOverride(
-                entity = Booking.class, association = "client", mode = FetchMode.JOIN),
-        @FetchProfile.FetchOverride(
-                entity = Booking.class, association = "car", mode = FetchMode.JOIN)
-})
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
