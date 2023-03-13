@@ -1,9 +1,13 @@
 package jane.dao;
 
+import com.querydsl.jpa.impl.JPAQuery;
 import jane.entity.Client;
+import org.hibernate.Session;
 
 import java.util.List;
 import java.util.Optional;
+
+import static jane.entity.QClient.client;
 
 public class ClientDao implements Dao<Long, Client> {
 
@@ -32,6 +36,14 @@ public class ClientDao implements Dao<Long, Client> {
     @Override
     public Client save(Client entity) {
         return null;
+    }
+
+    public List<Client> findAllByDrivingLicenceNo(Session session, Integer drivingLicenceNo) {
+        return new JPAQuery<Client>(session)
+                .select(client)
+                .from(client)
+                .where(client.drivingLicenceNo.eq(drivingLicenceNo))
+                .fetch();
     }
 
     public static ClientDao getInstance() {

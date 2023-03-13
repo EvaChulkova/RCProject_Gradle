@@ -1,31 +1,16 @@
 package jane.dao;
 
+import com.querydsl.jpa.impl.JPAQuery;
 import jane.entity.User;
+import org.hibernate.Session;
 
 import java.util.List;
 import java.util.Optional;
 
+import static jane.entity.QUser.user;
+
 public class UserDao implements Dao<Long, User> {
     private static final UserDao INSTANCE = new UserDao();
-
-
-    /*public List<User> findAll(Session session) {
-        *//*return session.createQuery("select u from User u", User.class)
-                .list();*//*
-
-
-        CriteriaBuilder cb = session.getCriteriaBuilder();
-
-        CriteriaQuery<User> criteria = cb.createQuery(User.class);
-        Root<User> user = criteria.from(User.class);
-
-        criteria.select(user);
-
-        return session.createQuery(criteria).list();
-    }*/
-
-
-
 
     @Override
     public List<User> findAll() {
@@ -50,6 +35,14 @@ public class UserDao implements Dao<Long, User> {
     @Override
     public User save(User entity) {
         return null;
+    }
+
+    public List<User> findAllByFirstName(Session session, String firstName) {
+        return new JPAQuery<User>(session)
+                .select(user)
+                .from(user)
+                .where(user.firstName.eq(firstName))
+                .fetch();
     }
 
 
