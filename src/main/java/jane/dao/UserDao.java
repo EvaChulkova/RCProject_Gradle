@@ -6,10 +6,12 @@ import jane.entity.User;
 import jane.query.QPredicate;
 import jane.query.filter.UserFilter;
 import org.hibernate.Session;
+import org.hibernate.graph.GraphSemantic;
 
 import java.util.List;
 import java.util.Optional;
 
+import static jane.entity.QClient.client;
 import static jane.entity.QUser.user;
 
 public class UserDao implements Dao<Long, User> {
@@ -65,6 +67,22 @@ public class UserDao implements Dao<Long, User> {
         return new JPAQuery<User>(session)
                 .select(user)
                 .from(user)
+                .where(predicate)
+                .fetch();
+    }
+
+    public List<User> findClientInformationAboutUserByUserInfo(Session session, UserFilter userFilter) {
+        Predicate predicate = QPredicate.builder()
+                .add(userFilter.getFirstName(), user.firstName::eq)
+                .add(userFilter.getLastname(), user.lastName::eq)
+                .add(userFilter.getLogin(), user.login::eq)
+                .buildAnd();
+
+        return new JPAQuery<User>(session)
+                .select(user)
+                .from(user)
+                .join(user.client, client)
+                .setHint(GraphSemantic.LOAD.getJpaHintName(), session.getEntityGraph("withClient"))
                 .where(predicate)
                 .fetch();
     }

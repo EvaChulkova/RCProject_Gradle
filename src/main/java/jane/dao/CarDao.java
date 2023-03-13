@@ -65,8 +65,6 @@ public class CarDao implements Dao<Long, Car> {
 
 
 
-
-
     public static CarDao getInstance() {
         return INSTANCE;
     }

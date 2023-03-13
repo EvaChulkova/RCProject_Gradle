@@ -1,8 +1,12 @@
 package jane.dao;
 
+import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
 import jane.entity.Client;
+import jane.query.QPredicate;
+import jane.query.filter.ClientFilter;
 import org.hibernate.Session;
+import org.hibernate.graph.GraphSemantic;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,6 +47,19 @@ public class ClientDao implements Dao<Long, Client> {
                 .select(client)
                 .from(client)
                 .where(client.drivingLicenceNo.eq(drivingLicenceNo))
+                .fetch();
+    }
+
+    public List<Client> findUserInfoAboutClientByDrivingLicenceNo(Session session, ClientFilter clientFilter) {
+        Predicate predicate = QPredicate.builder()
+                .add(clientFilter.getDrivingLicenceNo(), client.drivingLicenceNo::eq)
+                .buildAnd();
+
+        return  new JPAQuery<Client>(session)
+                .select(client)
+                .from(client)
+                .setHint(GraphSemantic.LOAD.getJpaHintName(), session.getEntityGraph("withUser"))
+                .where(predicate)
                 .fetch();
     }
 

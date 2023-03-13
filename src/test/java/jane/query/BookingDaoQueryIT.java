@@ -90,4 +90,5 @@ public class BookingDaoQueryIT {
         session.getTransaction().commit();
     }
 
+
 }

@@ -14,11 +14,18 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
-
+@NamedEntityGraph(
+        name = "withClient",
+        attributeNodes = {
+                @NamedAttributeNode("client")
+        }
+)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

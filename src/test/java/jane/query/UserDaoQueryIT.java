@@ -78,6 +78,31 @@ public class UserDaoQueryIT {
         List<String> lastNames = results.stream().map(User::getLastName).toList();
         assertThat(lastNames).contains(userFilter.getLastname());
 
+        session.getTransaction().commit();
+    }
+
+    @Test
+    void findClientInformationAboutUserByUserInfo() {
+        @Cleanup Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        UserFilter userFilter = UserFilter.builder()
+                .firstName("Inna")
+                .lastname("Nikitina")
+                .login("inna@gmail.com")
+                .build();
+
+        List<User> results = userDao.findClientInformationAboutUserByUserInfo(session, userFilter);
+        assertThat(results).hasSize(1);
+
+        List<String> firstNames = results.stream().map(User::getFirstName).toList();
+        assertThat(firstNames).contains(userFilter.getFirstName());
+
+        List<String> lastNames = results.stream().map(User::getLastName).toList();
+        assertThat(lastNames).contains(userFilter.getLastname());
+
+        List<String> logins = results.stream().map(User::getLogin).toList();
+        assertThat(logins).contains(userFilter.getLogin());
 
         session.getTransaction().commit();
     }
