@@ -72,7 +72,7 @@ public class TestDataImporter {
         addToBooking(session,  LocalDate.of(2023, 2, 14), LocalDate.of(2023, 2, 17), BookingStatusEnum.COMPLETED, PaymentStateEnum.PAID, "Booking is completed. Nice to meet you again!", inna, kiaRio);
         addToBooking(session, LocalDate.of(2023, 3, 16), LocalDate.of(2023, 3, 19), BookingStatusEnum.APPROVED, PaymentStateEnum.NOT_PAID, "Booking is approved. To pay...", inna, blackVWPolo);
 
-        addToBooking(session, LocalDate.of(2023, 2, 21), LocalDate.of(2023, 2, 27), BookingStatusEnum.COMPLETED, PaymentStateEnum.NOT_PAID, "Booking is completed. Nice to meet you again!", nina, miniCooper);
+        addToBooking(session, LocalDate.of(2023, 2, 21), LocalDate.of(2023, 2, 27), BookingStatusEnum.COMPLETED, PaymentStateEnum.PAID, "Booking is completed. Nice to meet you again!", nina, miniCooper);
         addToBooking(session, LocalDate.of(2023, 3, 11), LocalDate.of(2023, 3, 18), BookingStatusEnum.APPROVED, PaymentStateEnum.PAID, "Payment was successful! Have a good trip!", nina, miniCooper);
 
         addToBooking(session, LocalDate.of(2023, 3, 11), LocalDate.of(2023, 3, 21), BookingStatusEnum.APPROVED, PaymentStateEnum.PAID, "Payment was successful! Have a good trip!", viktor, VWTouareg);

@@ -17,7 +17,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import static jane.util.StringsUtil.SPACE;
+
 
 @Data
 @NoArgsConstructor
@@ -41,7 +41,4 @@ public class User {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Client client;
 
-    public String fullName() {
-        return getFirstName() + SPACE + getLastName();
-    }
 }
